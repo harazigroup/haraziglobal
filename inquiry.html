@@ -1,1 +1,191 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Request Wholesale Quotation | Harazi Global Trading</title><meta name="description" content="Harazi Global Trading international wholesale FMCG and commodities sourcing from Malaysia."><link rel="stylesheet" href="style.css"></head><body><header><nav><a href="index.html"><strong>HARAZI GLOBAL TRADING</strong></a><div class="links"><a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About Us</a><a href="inquiry.html">Wholesale Inquiry</a><a href="contact.html">Contact</a></div></nav></header><main><h1>Request a Wholesale Quotation</h1><p>Tell us what you want to source and where you need it delivered. Our team will review product feasibility and supplier availability before issuing any commercial offer.</p><form id="rfq"><label for="company">Company name *</label><input id="company" required><label for="name">Contact person *</label><input id="name" required><label for="email">Business email *</label><input id="email" type="email" required><label for="country">Destination country *</label><input id="country" required><label for="product">Product/category *</label><select id="product" required><option value="">Choose a category</option><option>Palm Oil</option><option>Dairy</option><option>Malaysian FMCG</option><option>International FMCG</option><option>Other sourcing</option></select><label for="qty">Required quantity and packaging *</label><input id="qty" required placeholder="e.g. 1 x 20ft container, cartons, MT"><label for="port">Destination port or city</label><input id="port"><label for="notes">Additional specifications</label><textarea id="notes"></textarea><label><input id="ack" type="checkbox" required style="width:auto"> I understand this is an inquiry, not an order, and have read the <a href="privacy.html">Privacy Notice</a>.</label><button type="submit">Prepare Inquiry</button><p id="msg" class="notice small" aria-live="polite">Demo only: no inquiry is sent or stored. Connect a secure form backend before going live.</p></form><script>document.getElementById('rfq').addEventListener('submit',function(e){e.preventDefault();document.getElementById('msg').textContent='Form completed locally. Submission is not connected yet. Please configure the business email and secure form service before publishing.'});let c=new URLSearchParams(location.search).get('category');if(c&&[...document.querySelector('#product').options].some(o=>o.value===c))document.querySelector('#product').value=c;</script></main><footer><div class="inner"><strong>HARAZI GLOBAL TRADING</strong><p>Operated by Harazi General Trading Sdn. Bhd. (SSM 202201006110), Malaysia.</p><p><a href="terms.html">Terms & Conditions</a><a href="privacy.html">Privacy Policy</a><a href="cookies.html">Cookie Policy</a><a href="shipping.html">Shipping & Trade</a><a href="legal.html">Legal Notice</a></p><p class="small">B2-2-3, Publika, Solaris Dutamas, 50480 Kuala Lumpur, Malaysia · © 2026 Harazi Global Trading</p></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Request Wholesale Quotation | Harazi Global Trading
+  </title>
+  <meta content="Harazi Global Trading international wholesale FMCG and commodities sourcing from Malaysia." name="description"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to content
+  </a>
+  <header class="site-header">
+   <div class="container nav-wrap">
+    <a aria-label="Harazi Global Trading home" class="brand" href="index.html">
+     <img alt="Harazi Global Trading logo" src="logo.png"/>
+    </a>
+    <button aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation" class="menu-toggle" type="button">
+     <span>
+     </span>
+     <span>
+     </span>
+     <span>
+     </span>
+    </button>
+    <nav aria-label="Main navigation" class="nav-links" id="primary-nav">
+     <a href="index.html">
+      Home
+     </a>
+     <a href="products.html">
+      Products
+     </a>
+     <a href="about.html">
+      About Us
+     </a>
+     <a aria-current="page" href="inquiry.html">
+      Wholesale Inquiry
+     </a>
+     <a href="contact.html">
+      Contact
+     </a>
+     <a class="nav-cta" href="inquiry.html">
+      Request a Quote <span class="arrow" aria-hidden="true"></span>
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main class="container legal-content" id="main-content">
+   <h1>
+    Request a Wholesale Quotation
+   </h1>
+   <p>
+    Tell us what you want to source and where you need it delivered. Our team will review product feasibility and supplier availability before issuing any commercial offer.
+   </p>
+   <div class="notice small">
+    Share only the business details needed to assess your request. Please do not include confidential documents or payment information.
+   </div>
+   <form action="/thank-you.html" data-netlify="true" method="POST" name="wholesale-inquiry" netlify-honeypot="bot-field">
+    <input name="form-name" type="hidden" value="wholesale-inquiry"/>
+    <p hidden="">
+     <label>
+      Leave blank
+      <input name="bot-field"/>
+     </label>
+    </p>
+    <label for="company">
+     Company name *
+    </label>
+    <input autocomplete="organization" id="company" maxlength="160" name="company" required=""/>
+    <label for="name">
+     Contact person *
+    </label>
+    <input autocomplete="name" id="name" maxlength="120" name="contact_person" required=""/>
+    <label for="email">
+     Business email *
+    </label>
+    <input autocomplete="email" id="email" maxlength="254" name="email" required="" type="email"/>
+    <label for="country">
+     Destination country *
+    </label>
+    <input autocomplete="country-name" id="country" maxlength="120" name="destination_country" required=""/>
+    <label for="product">
+     Product/category *
+    </label>
+    <select id="product" name="category" required="">
+     <option value="">
+      Choose a category
+     </option>
+     <option>
+      Palm Oil
+     </option>
+     <option>
+      Dairy
+     </option>
+     <option>
+      Malaysian FMCG
+     </option>
+     <option>
+      International FMCG
+     </option>
+     <option>
+      Other sourcing
+     </option>
+    </select>
+    <label for="qty">
+     Required quantity and packaging *
+    </label>
+    <input id="qty" maxlength="200" name="quantity" placeholder="e.g. 1 x 20ft container, cartons, MT" required=""/>
+    <label for="port">
+     Destination port or city
+    </label>
+    <input id="port" maxlength="160" name="destination_port"/>
+    <label for="notes">
+     Additional specifications
+    </label>
+    <textarea id="notes" maxlength="4000" name="notes"></textarea>
+    <label>
+     <input id="ack" name="privacy_acknowledgment" required="" type="checkbox" value="accepted"/>
+     I understand this is an inquiry, not an order, and have read the
+     <a href="privacy.html">
+      Privacy Notice
+     </a>
+     .
+    </label>
+    <button type="submit">
+     Send Wholesale Inquiry
+    </button>
+   </form>
+  </main>
+  <footer class="site-footer">
+   <div class="container">
+    <div class="footer-top">
+     <div>
+      <img alt="Harazi Global Trading" class="footer-logo" src="logo.png"/>
+      <p>
+       Connecting Global Products with Global Markets.
+      </p>
+     </div>
+     <div>
+      <strong>
+       Explore
+      </strong>
+      <a href="products.html">
+       Products
+      </a>
+      <a href="about.html">
+       About Us
+      </a>
+      <a href="inquiry.html">
+       Request a Quote
+      </a>
+      <a href="contact.html">
+       Contact
+      </a>
+     </div>
+     <div>
+      <strong>
+       Information
+      </strong>
+      <a href="terms.html">
+       Terms &amp; Conditions
+      </a>
+      <a href="privacy.html">
+       Privacy Policy
+      </a>
+      <a href="cookies.html">
+       Cookie Policy
+      </a>
+      <a href="shipping.html">
+       Shipping &amp; Trade
+      </a>
+      <a href="legal.html">
+       Legal Notice
+      </a>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     Operated by Harazi General Trading Sdn. Bhd. · SSM 202201006110 · Kuala Lumpur, Malaysia
+     <span>
+      © 2026 Harazi Global Trading
+     </span>
+    </div>
+   </div>
+  </footer>
+  <script defer="" src="site.js">
+  </script>
+ </body>
+</html>

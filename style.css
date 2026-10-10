@@ -57,3 +57,15 @@
 .home-featured-card span{display:block;margin:0 13px 15px;color:#4b249d;font-size:12px;font-weight:800}
 @media(min-width:950px){.home-featured-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.home-featured-card>div{height:155px}}
 @media(max-width:540px){.home-featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-featured-card>div{height:130px}.home-featured-card h3{font-size:13px}}
+
+/* Searchable multi-brand wholesale catalogue */
+.catalog-search-panel{display:flex;flex-wrap:wrap;align-items:center;gap:9px 15px;margin:22px 0 17px;padding:17px 19px;border-radius:12px;border:1px solid #e3e7f0;background:#f8f9fd}
+.catalog-search-panel label{font-weight:800;font-size:14px;color:#16254d;flex-basis:100%}
+.catalog-search-panel input{flex:1 1 260px;min-width:0;min-height:46px;border:1px solid #d7dbe6;border-radius:8px;padding:10px 14px;background:#fff;color:#1d2d4b;font:inherit}
+.catalog-search-panel input:focus{outline:2px solid #7254ba;outline-offset:1px}
+.catalog-search-panel span{font-size:13px;color:#5c6681;font-weight:700}
+.catalog-filters{display:flex;flex-wrap:wrap;gap:8px}
+.catalog-card[hidden]{display:none!important}
+.catalog-new .catalog-body{min-height:220px}
+.catalog-new .catalog-body h3{font-size:17px}
+@media(max-width:650px){.catalog-search-panel{padding:13px}.catalog-search-panel input{flex-basis:100%}.catalog-new .catalog-body{min-height:0}}
